@@ -10,6 +10,9 @@ public class Question2 {
             if (item == element) {
                 System.out.println("Element found in array");
                 return;
+            } else {
+                System.out.println("Element not found in array");
+                return;
             }
         }
     }
