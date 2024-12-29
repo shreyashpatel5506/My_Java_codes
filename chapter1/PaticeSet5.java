@@ -1,3 +1,4 @@
+package chapter1;
 import java.util.Scanner;
 public class PaticeSet5 {
     public static void main(String[] args) {
