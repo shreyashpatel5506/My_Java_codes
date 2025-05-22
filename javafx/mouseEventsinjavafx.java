@@ -1,3 +1,5 @@
+package javafx;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
@@ -9,7 +11,8 @@ public class App extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    @Override       
+
+    @Override
     public void start(Stage baseStage) {
         baseStage.setTitle("patel");
         Circle circle = new Circle(50, Color.BLUE);

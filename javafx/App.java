@@ -1,3 +1,5 @@
+package javafx;
+
 import javafx.application.*;
 import javafx.geometry.Insets;
 import javafx.stage.*;
@@ -6,20 +8,18 @@ import javafx.scene.layout.*;
 import javafx.scene.text.Text;
 import javafx.scene.control.*;
 
-
-public class App extends Application{
+public class App extends Application {
     public static void main(String[] args) {
         launch(args);
     }
 
-    public void start(Stage primarstage){
+    public void start(Stage primarstage) {
         primarstage.setTitle("Shreyash Patel");
 
         GridPane root = new GridPane();
         root.setPadding(new Insets(10, 10, 10, 10));
         root.setHgap(7);
         root.setVgap(10);
-
 
         Label name = new Label("Username:");
         GridPane.setConstraints(name, 0, 0);
@@ -42,13 +42,13 @@ public class App extends Application{
             System.out.println("Username: " + username);
             System.out.println("Password: " + passwordText);
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Login Info");  
+            alert.setTitle("Login Info");
             alert.setHeaderText(null);
             alert.setContentText("Username: " + username + "\nPassword: " + passwordText);
-            alert.showAndWait();    
+            alert.showAndWait();
 
         });
-        
+
         root.getChildren().addAll(name, nameInput, password, passwordInput, loginButton);
         Scene scene = new Scene(root, 300, 200);
         primarstage.setScene(scene);

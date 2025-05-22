@@ -1,35 +1,38 @@
+
 import java.util.*;
 import java.time.LocalDate;
-class Book{
+
+class Book {
     String BookName;
     int Quantity;
 
-    public Book(String BookName,int Quantity){
+    public Book(String BookName, int Quantity) {
         this.BookName = BookName;
-        this.Quantity=Quantity;
+        this.Quantity = Quantity;
     }
 }
-class issuedBook{
+
+class issuedBook {
     String issuer;
     String BookName;
     LocalDate issuedDate;
     LocalDate deadlineDate;
 
-    public issuedBook(String issuer,String BookName,LocalDate issuedDate,LocalDate deadlineDate){
+    public issuedBook(String issuer, String BookName, LocalDate issuedDate, LocalDate deadlineDate) {
         this.issuer = issuer;
-        this BookName= BookName;
-        this.issuedDate=issuedDate;
-        this.deadlineDate=deadlineDate;
+        this.BookName = BookName;
+        this.issuedDate = issuedDate;
+        this.deadlineDate = deadlineDate;
     }
 }
-    
-public class LibrarySystem{
+
+public class LibrarySystem {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         List<Book> books = new ArrayList<>();
         List<issuedBook> issuedBooks = new ArrayList<>();
         int choice;
-        do{
+        do {
             System.out.println("1. Add Book");
             System.out.println("2. Issue Book");
             System.out.println("3. Return Book");
@@ -38,7 +41,7 @@ public class LibrarySystem{
             System.out.print("Enter your choice: ");
             choice = sc.nextInt();
             sc.nextLine(); // Consume newline
-            switch(choice){
+            switch (choice) {
                 case 1:
                     System.out.print("Enter book name: ");
                     String bookName = sc.nextLine();
@@ -95,7 +98,8 @@ public class LibrarySystem{
                     break;
                 case 4:
                     for (issuedBook ib : issuedBooks) {
-                        System.out.println("Issuer: " + ib.issuer + ", Book Name: " + ib.BookName + ", Issued Date: " + ib.issuedDate + ", Deadline Date: " + ib.deadlineDate);
+                        System.out.println("Issuer: " + ib.issuer + ", Book Name: " + ib.BookName + ", Issued Date: "
+                                + ib.issuedDate + ", Deadline Date: " + ib.deadlineDate);
                     }
                     break;
                 case 5:
@@ -104,7 +108,7 @@ public class LibrarySystem{
                 default:
                     System.out.println("Invalid choice! Please try again.");
             }
-        } while(choice != 5);
+        } while (choice != 5);
         sc.close();
     }
 }
