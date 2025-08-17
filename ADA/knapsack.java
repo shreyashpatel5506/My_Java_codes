@@ -1,6 +1,4 @@
 
-package pkg230760107094;
-
 import java.util.Scanner;
 public class knapsack {
     public static void inputvalue(int n,float a[]){

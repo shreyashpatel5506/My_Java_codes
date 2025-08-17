@@ -1,4 +1,3 @@
-package pkg230760107094;
 
 import java.util.Scanner;
 
