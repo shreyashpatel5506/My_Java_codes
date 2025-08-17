@@ -35,6 +35,6 @@ public class Ch2PraticeSet {
     int r=2;
     System.out.println(((Math.pow(x,2)-Math.pow(y,2))/2*s*r));
  
-    
+    sc.close();   
 }
 }
